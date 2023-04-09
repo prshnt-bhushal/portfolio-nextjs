@@ -15,7 +15,7 @@ const NavBar = () => {
   return (
     <div className='fixed w-full h-20 shadow-xl z-[100]'>
         <div className='flex justify-between items-center w-full h-full px-2 xl:px-16'>
-            <Image src='/../public/assets/Images/logo.png' alt='portfolio logo' width='80' height='40'/>
+            <Image src='/../public/assets/Images/signature.png' alt='portfolio logo' width='120' height='50'/>
             <div>
                 <ul className='hidden md:flex'>
                 <Link href='/'>
@@ -40,11 +40,11 @@ const NavBar = () => {
             </div>
         </div>
         <div className={nav? 'md:hidden fixed left-0 top-0 w-full h-full bg-black/70':''}>
-            <div className={nav?'md:hidden fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500':'fixed left-[-100%] top-0 p-10 ease-in duration-500'}>
+            <div className={nav?'md:hidden fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#16242d] p-10 ease-in duration-500':'fixed left-[-100%] top-0 p-10 ease-in duration-500'}>
                 <div>
                     <div className='flex w-full items-center justify-between'>
-                    <Image src='/../public/assets/Images/logo.png' alt='portfolio logo' width='60' height='30'/>
-                    <div onClick={handelNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer '>
+                    <Image src='/../public/assets/Images/signature.png' alt='portfolio logo' width='120' height='100'/>
+                    <div onClick={handelNav} className='rounded-full shadow-sm shadow-gray-100 p-3 cursor-pointer hover:scale-110 ease-in duration-500 '>
                         <AiOutlineClose/>
                      </div>
                     </div>
@@ -67,21 +67,27 @@ const NavBar = () => {
                         </Link>
                     </ul>
                     <div className='pt-40'>
-                        <p className='uppercase tracking-widest text-[#5651e5]'>You Can Find Me Here</p>
-                        <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                            <FaLinkedinIn/>
-                            </div>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                            <FaGithub/>
-                            </div>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                            <BsInstagram/>
-                            </div>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                        <p className='uppercase tracking-widest'>Connect and Stay in Touch.</p>
+                        <div className='flex items-center justify-between my-6 w-full sm:w-[80%]'>
+                            <Link href='https://www.linkedin.com/in/prashant-bhushal-a1154923b/'>
+                                <div className='rounded-full shadow-sm shadow-gray-400 p-3 cursor-pointer hover:scale-150 ease-in duration-500'>
+                                    <FaLinkedinIn/>
+                                </div>
+                            </Link>
+                            <Link href='https://github.com/prshnt-bhushal'>
+                                <div className='rounded-full shadow-sm shadow-gray-400 p-3 cursor-pointer hover:scale-150 ease-in duration-500'>
+                                    <FaGithub/>
+                                </div>
+                            </Link>
+                            <Link href='https://www.instagram.com/__prshnt__/'>
+                                <div className='rounded-full shadow-sm shadow-gray-400 p-3 cursor-pointer hover:scale-150 ease-in duration-500'>
+                                    <BsInstagram/>
+                                </div>
+                            </Link>
+                            <div className='rounded-full shadow-sm shadow-gray-400 p-3 cursor-pointer hover:scale-150 ease-in duration-500'>
                             <AiOutlineMail/>
                             </div>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                            <div className='rounded-full shadow-sm shadow-gray-400 p-3 cursor-pointer hover:scale-150 ease-in duration-500'>
                             <BsFillPersonLinesFill/>
                             </div>
                         </div>
