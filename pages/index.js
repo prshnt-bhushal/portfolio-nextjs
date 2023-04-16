@@ -1,4 +1,3 @@
-import NavBar from '@/components/NavBar'
 import Head from 'next/head'
 import Image from 'next/image'
 import Main from '@/components/Main'
@@ -18,7 +17,6 @@ export default function Home() {
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar/>
       <Main/>
       <About/>
       <Skills/>
