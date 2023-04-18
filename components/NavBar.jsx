@@ -5,12 +5,15 @@ import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai'
 import{FaGithub, FaLinkedinIn} from 'react-icons/fa'
 import {BsFillPersonLinesFill, BsInstagram} from 'react-icons/bs'
 import { useRouter } from 'next/router'
+import {MoonIcon, SunIcon} from '../public/All-Text/Icons'
+import useThemeSwitcher from './hooks/useThemeSwitcher'
 
 const NavBar = () => {
     const [nav, setNav]=useState(false);
-    const [shadow, setShadow] =useState(false)
-    const [navBg, setNavBg]=useState('#16242d')
-    const [linkColor,setLinkColor]=useState('#eeeeee')
+    const [shadow, setShadow] =useState(false);
+    const [navBg, setNavBg]=useState('#16242d');
+    const [linkColor,setLinkColor]=useState('#eeeeee');
+    const [mode,setMode]=useThemeSwitcher();
     const router=useRouter()
 
     useEffect( ()=> {
@@ -44,28 +47,34 @@ const NavBar = () => {
 
   return (
     <div style={{backgroundColor :`${navBg}`}} className={shadow?'fixed w-full h-20 shadow-xl z-[100]':'fixed w-full h-20 z-[100]'}>
-        <div className='flex justify-between items-center w-full h-full px-2 xl:px-16'>
+        <div className='flex justify-between items-center w-full h-full px-2 xl:px-10'>
             <Link href='/'>
                 <Image src='/../public/assets/Images/signature.png' alt='portfolio logo' width='120' height='50'/>
             </Link>
-            <div>
-                <ul  style={{Color :`${linkColor}`}} className='hidden md:flex'>
+            <div className='flex justify-center items-center'>
+                <ul  style={{Color :`${linkColor}`}} className='hidden md:flex dark:text-[#f3f2fb]'>
                 <Link href='/#home'>
-                    <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
+                    <li className='ml-10 text-sm uppercase hover:text-[#607e91]'>Home</li>
                 </Link>
                 <Link href='/#about'>
-                    <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
+                    <li className='ml-10 text-sm uppercase hover:text-[#607e91]'>About</li>
                 </Link>
                 <Link href='/#skills'>
-                    <li className='ml-10 text-sm uppercase hover:border-b'>Skills</li>
+                    <li className='ml-10 text-sm uppercase hover:text-[#607e91]'>Skills</li>
                 </Link>
                 <Link href='/#projects'>
-                    <li className='ml-10 text-sm uppercase hover:border-b'>Projects</li>
+                    <li className='ml-10 text-sm uppercase hover:text-[#607e91]'>Projects</li>
                 </Link>
                 <Link href='/#contact'>
-                    <li className='ml-10 text-sm uppercase hover:border-b'>Contact</li>
+                    <li className='ml-10 text-sm uppercase hover:text-[#607e91]'>Contact</li>
                 </Link>
                 </ul>
+                <button className='ml-20 flex items-center justify-center rounded-full p-1 sm:mr-2 dark:text-[#FDB813]' onClick={()=>setMode(mode==="light"?"dark":"light")}>
+                    {mode==="dark"?
+                        <MoonIcon className={"fill-dark"}/>:
+                        <SunIcon className={"fill-dark"}/>
+                    }
+                </button>
                 <div onClick={handelNav} className='md:hidden cursor-pointer'>
                     <AiOutlineMenu size={25} />
                 </div>
@@ -89,19 +98,19 @@ const NavBar = () => {
                 <div className='py-4 flex flex-col'>
                     <ul className='uppercase'>
                         <Link onClick={()=> setNav(false)} href='/#home'>
-                            <li className='py-4 text-sm'>Home</li>
+                            <li className='py-4 text-sm hover:text-[#607e91]'>Home</li>
                         </Link>
                         <Link onClick={()=> setNav(false)} href='/#about'>
-                            <li className='py-4 text-sm'>About</li>
+                            <li className='py-4 text-sm hover:text-[#607e91]'>About</li>
                         </Link>
                         <Link onClick={()=> setNav(false)} href='/#skills'>
-                            <li className='py-4 text-sm'>Skills</li>
+                            <li className='py-4 text-sm hover:text-[#607e91]'>Skills</li>
                         </Link>
                         <Link onClick={()=> setNav(false)} href='/#projects'>
-                            <li className='py-4 text-sm'>Projects</li>
+                            <li className='py-4 text-sm hover:text-[#607e91]'>Projects</li>
                         </Link>
                         <Link onClick={()=> setNav(false)} href='/#contact'>
-                            <li className='py-4 text-sm'>Contact</li>
+                            <li className='py-4 text-sm hover:text-[#607e91]'>Contact</li>
                         </Link>
                     </ul>
                     <div className='pt-40'>

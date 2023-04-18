@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 html{
-  scroll-behavior:auto smooth;
+  scroll-behavior:smooth;
 }
 
 @layer base{
   body{
-    @apply bg-[#16242d] text-[#eeeeee] tracking-wide
+    @apply bg-[#16242d] text-[#eeeeee] tracking-wide dark:bg-[#e0dfdf] dark:text-[#16242d] ease-in-out duration-500
   }
   h1,h2,h3,h4,h5,h6{
     @apply font-bold
@@ -21,8 +21,5 @@ html{
   }
   li{
     @apply cursor-pointer
-  }
-  button{
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651ef] to-[#709dff] text-white
   }
 }
