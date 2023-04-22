@@ -12,10 +12,13 @@ const Projects = () => {
       <div className='max-w-[1240px] mx-auto px-2 py-16'>
         <p className='text-xl tracking-widest uppercase'>Porjects</p>
         <h2 className='py-4'>What I've Built</h2>
-        <div className='grid md:grid-cols-2 gap-8'>
-          <ProjectsItems title='Route' backgroundImg={routeImg} projectUrl='/route'/>
-          <ProjectsItems title='TradeEx' backgroundImg={tradeexImg} projectUrl='/tradeex'/>
-          <ProjectsItems title='Expenses' backgroundImg={expensesImg} projectUrl='/expenses'/>
+        <div className='grid gap-8 w-full'>
+          <ProjectsItems title='Route' description={'Route Description'} backgroundImg={routeImg} projectUrl='/route'/>
+          <ProjectsItems title='TradeEx' description={'TradeEx Description'} backgroundImg={tradeexImg} projectUrl='/tradeex'/>
+        </div>
+        <h2 className='py-4'>Working on</h2>
+        <div className='grid gap-8 w-full'>
+          <ProjectsItems title='Expenses' description={'Expenses Description'} backgroundImg={expensesImg} projectUrl='/expenses'/>
         </div>
       </div>
     </div>

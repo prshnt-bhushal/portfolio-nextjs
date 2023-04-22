@@ -1,17 +1,19 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import {BiLinkExternal} from 'react-icons/bi'
 
-const ProjectsItems = ({title, backgroundImg, projectUrl}) => {
+const ProjectsItems = ({title,description, backgroundImg, projectUrl}) => {
   return (
-    <div className='relative flex items-center justify-center h-auto w-full shadow-xl shadow-gary-400 rounded-xl p-4 group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]'>
-    <Image className='rounded-xl group-hover:opacity-10' src={backgroundImg} alt='/'/>
-    <div className='hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
-      <h3 className='text-2xl text-white tracking-wider text-center'>{title}</h3>
-      <p className='pb-4 pt-2 text-white text-center'>React JS</p>
+    <div className='relative bg-[#0e2331] dark:bg-[#c5c5c5] sm:flex justify-center grid sm:justify-items-center sm:justify-between flex-row-reverse h-auto w-full shadow-xl shadow-gary-400 rounded-xl p-4 ease-in duration-500'>
+    <Image className='md:w-[500px] md:h-[281px] w-[250px] h-[140px] rounded-xl' src={backgroundImg} alt='/'/>
+    <div className='p-4 grid' >
+      <h3 className='justify-self-start text-2xl text-white tracking-wider text-center'>{title}</h3>
+      <p className='pb-4 pt-2 text-white text-center'>{description}</p>
       <Link href={projectUrl}>
-        <p className='text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer'>More Info</p>
+        <p className='flex items-center py-3 text-gray-700 font-bold cursor-pointer hover:text-gray-900'>More Info<BiLinkExternal className='ml-1'/></p>
       </Link>
+      {/* {4E6E81} */}
     </div>
   </div>
   )
