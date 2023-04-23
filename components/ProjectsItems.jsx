@@ -13,7 +13,6 @@ const ProjectsItems = ({title,description, backgroundImg, projectUrl}) => {
       <Link href={projectUrl}>
         <p className='flex items-center py-3 text-gray-700 font-bold cursor-pointer hover:text-gray-900'>More Info<BiLinkExternal className='ml-1'/></p>
       </Link>
-      {/* {4E6E81} */}
     </div>
   </div>
   )

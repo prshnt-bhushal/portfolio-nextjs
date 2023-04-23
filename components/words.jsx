@@ -1,10 +1,7 @@
 
 const words = [
-    'Namaste World',
-        'I\'m Prshnt',
-        'An Engineer,You may say.',
+        'Namaste World',
         'Welcome to my domain',
-        'Feel free to roam around ',
-        '           :)'
+        'Feel free to roam around '
   ]
   export default words

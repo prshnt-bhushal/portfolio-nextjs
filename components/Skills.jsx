@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import SkillsItems from './SkillsItems'
 
 const Skills = () => {
   return (
@@ -8,129 +9,17 @@ const Skills = () => {
         <p className='text-xl tracking-widest uppercase text-[#fff]'>Skills</p>
         <h2 className='p-4'>What I can Do</h2>
         <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-          <div className='p-6 shadow-xl bg-[#0e2331] dark:bg-[#c5c5c5] rounded-xl hover:scale-105 ease-in duration-300'>
-            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-              <div className='m-auto'>
-                <Image
-                src='/../public/assets/skills/html5.png'
-                width='64'
-                height='64'
-                alt='Html Logo'
-                />
-              </div>
-              <div className='flex flex-col items-center justify-center'><h3>Html</h3>
-              </div>
-            </div>
-          </div><div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-              <div className='m-auto'>
-                <Image
-                src='/../public/assets/skills/CSS.png'
-                width='64'
-                height='64'
-                alt='CSS logo'
-                />
-              </div>
-              <div className='flex flex-col items-center justify-center'><h3>CSS</h3>
-              </div>
-            </div>
-          </div><div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-              <div className='m-auto'>
-                <Image
-                src='/../public/assets/skills/javascript.png'
-                width='64'
-                height='64'
-                alt='JavaScript logo'
-                />
-              </div>
-              <div className='flex flex-col items-center justify-center'><h3>JavaScript</h3>
-              </div>
-            </div>
-          </div><div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-              <div className='m-auto'>
-                <Image
-                src='/../public/assets/skills/React.png'
-                width='64'
-                height='64'
-                alt='React logo'
-                />
-              </div>
-              <div className='flex flex-col items-center justify-center'><h3>React</h3>
-              </div>
-            </div>
-          </div><div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-              <div className='m-auto'>
-                <Image
-                src='/../public/assets/skills/tailwind.png'
-                width='64'
-                height='64'
-                alt='TailWind Logo'
-                />
-              </div>
-              <div className='flex flex-col items-center justify-center'><h3>Tailwind</h3>
-              </div>
-            </div>
-          </div><div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-              <div className='m-auto'>
-                <Image
-                src='/../public/assets/skills/github.png'
-                width='64'
-                height='64'
-                alt='GitHub Logo'
-                />
-              </div>
-              <div className='flex flex-col items-center justify-center'><h3>GitHub</h3>
-              </div>
-            </div>
-          </div><div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-              <div className='m-auto'>
-                <Image
-                src='/../public/assets/skills/aws.png'
-                width='64'
-                height='64'
-                alt='AWS Logo'
-                />
-              </div>
-              <div className='flex flex-col items-center justify-center'><h3>AWS</h3>
-              </div>
-            </div>
-          </div><div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-              <div className='m-auto'>
-                <Image
-                src='/../public/assets/skills/firebase.png'
-                width='64'
-                height='64'
-                alt='Firebase Logo'
-                />
-              </div>
-              <div className='flex flex-col items-center justify-center'><h3>Firebase</h3>
-              </div>
-            </div>
-          </div><div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-              <div className='m-auto'>
-                <Image
-                src='/../public/assets/skills/java.png'
-                width='64'
-                height='64'
-                alt='Java Logo'
-                />
-              </div>
-              <div className='flex flex-col items-center justify-center'><h3>Java</h3>
-              </div>
-            </div>
+          <SkillsItems skillImage='/../public/assets/skills/html5.png' skillName='Html' />
+          <SkillsItems skillImage='/../public/assets/skills/CSS.png' skillName='CSS' />
+          <SkillsItems skillImage='/../public/assets/skills/javascript.png' skillName='JavaScript' />
+          <SkillsItems skillImage='/../public/assets/skills/React.png' skillName='React' />
+          <SkillsItems skillImage='/../public/assets/skills/tailwind.png' skillName='Tailwind' />
+          <SkillsItems skillImage='/../public/assets/skills/github.png' skillName='GitHub' />
+          <SkillsItems skillImage='/../public/assets/skills/java.png' skillName='Java' />
+          <SkillsItems skillImage='/../public/assets/skills/aws.png' skillName='AWS' />
+          <SkillsItems skillImage='/../public/assets/skills/firebase.png' skillName='Firebase' />
           </div>
-
-        </div>
-
-      </div>
-      
+      </div>     
     </div>
   )
 }
