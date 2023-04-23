@@ -11,7 +11,7 @@ const Main = () => {
       <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
         <div>
           <h1 className='py-3'><Typing/></h1>
-          <h1 className='py-2 text-gray-700'>Computer Engineer</h1>
+          <h1 className='py-2 text-gray-700'>/* Welcome to my domain */</h1>
           <p className='uppercase text-sm tracking-widest py-4 text-gray-600 max-w-[70%] m-auto'>Lets Build something together</p>
           <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
             <div className='flex items-center justify-between my-6 w-full sm:w-[80%]'>

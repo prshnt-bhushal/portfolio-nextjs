@@ -4,9 +4,9 @@ import SkillsItems from './SkillsItems'
 
 const Skills = () => {
   return (
-    <div id='skills' className='w-full lg:h-screen p-2'>
+    <div id='skills' className='w-full py-12 lg:h-screen'>
       <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
-        <p className='text-xl tracking-widest uppercase text-[#fff]'>Skills</p>
+        <p className='uppercase font-serif font-extrabold text-2xl tracking-widest text-[#e0dfdf] dark:text-[#16242d] ease-in duration-300'>Skills</p>
         <h2 className='p-4'>What I can Do</h2>
         <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
           <SkillsItems skillImage='/../public/assets/skills/html5.png' skillName='Html' />
