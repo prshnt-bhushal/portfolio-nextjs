@@ -48,24 +48,24 @@ const NavBar = () => {
   return (
     <div style={{backgroundColor :`${navBg}`}} className={shadow?'fixed w-full h-20 shadow-xl z-[100]':'fixed w-full h-20 z-[100]'}>
         <div className='flex justify-between items-center w-full h-full px-2 xl:px-10'>
-            <Link href='/'>
+            <Link scroll={false} href='/#home'>
                 <Image src='/../public/assets/Images/signature.png' alt='portfolio logo' width='120' height='50'/>
             </Link>
             <div className='flex justify-center items-center'>
                 <ul  style={{Color :`${linkColor}`}} className='hidden md:flex dark:text-[#f3f2fb]'>
-                <Link href='/#home'>
+                <Link scroll={false} href='/#home'>
                     <li className='ml-10 text-sm uppercase hover:text-[#607e91]'>Home</li>
                 </Link>
-                <Link href='/#about'>
+                <Link scroll={false} href='/#about'>
                     <li className='ml-10 text-sm uppercase hover:text-[#607e91]'>About</li>
                 </Link>
-                <Link href='/#skills'>
+                <Link scroll={false} href='/#skills'>
                     <li className='ml-10 text-sm uppercase hover:text-[#607e91]'>Skills</li>
                 </Link>
-                <Link href='/#projects'>
+                <Link scroll={false} href='/#projects'>
                     <li className='ml-10 text-sm uppercase hover:text-[#607e91]'>Projects</li>
                 </Link>
-                <Link href='/#contact'>
+                <Link scroll={false} href='/#contact'>
                     <li className='ml-10 text-sm uppercase hover:text-[#607e91]'>Contact</li>
                 </Link>
                 </ul>
@@ -84,7 +84,7 @@ const NavBar = () => {
             <div className={nav?'md:hidden fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#16242d] p-10 ease-in duration-500':'fixed left-[-100%] top-0 p-10 ease-in duration-500'}>
                 <div>
                     <div className='flex w-full items-center justify-between'>
-                    <Link onClick={()=> setNav(false)} href='/'>
+                    <Link scroll={false} onClick={()=> setNav(false)} href='/#home'>
                         <Image src='/../public/assets/Images/signature.png' alt='portfolio logo' width='120' height='50'/>
                     </Link>
                     <div onClick={handelNav} className='p-3 dark:text-white cursor-pointer hover:scale-110 ease-in duration-500 '>
@@ -97,19 +97,19 @@ const NavBar = () => {
                 </div>
                 <div className='py-4 flex flex-col'>
                     <ul className='uppercase dark:text-[#f3f2fb]'>
-                        <Link onClick={()=> setNav(false)} href='/#home'>
+                        <Link scroll={false} href='/#home' onClick={()=> setNav(false)} >
                             <li className='py-4 text-sm hover:text-[#607e91]'>Home</li>
                         </Link>
-                        <Link onClick={()=> setNav(false)} href='/#about'>
+                        <Link scroll={false} onClick={()=> setNav(false)} href='/#about'>
                             <li className='py-4 text-sm hover:text-[#607e91]'>About</li>
                         </Link>
-                        <Link onClick={()=> setNav(false)} href='/#skills'>
+                        <Link scroll={false} onClick={()=> setNav(false)} href='/#skills'>
                             <li className='py-4 text-sm hover:text-[#607e91]'>Skills</li>
                         </Link>
-                        <Link onClick={()=> setNav(false)} href='/#projects'>
+                        <Link scroll={false} onClick={()=> setNav(false)} href='/#projects'>
                             <li className='py-4 text-sm hover:text-[#607e91]'>Projects</li>
                         </Link>
-                        <Link onClick={()=> setNav(false)} href='/#contact'>
+                        <Link scroll={false} onClick={()=> setNav(false)} href='/#contact'>
                             <li className='py-4 text-sm hover:text-[#607e91]'>Contact</li>
                         </Link>
                     </ul>

@@ -1,5 +1,5 @@
 import React from 'react'
-import words from "./words";
+import { words } from './paragraph';
 
 class Typing extends React.Component {
     componentDidMount() {

@@ -1,4 +1,5 @@
 import React from 'react'
+import { profileIntro } from './paragraph'
 
 const About = () => {
   return (
@@ -9,12 +10,12 @@ const About = () => {
                 <h2 className='py-4'>Who I am</h2>
                 <p className='py-2 text-gray-600'>//I am not your normal developer</p>
                 <p  className='py-2 text-gray-600'>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet ex quae earum et tempore maiores iure architecto nobis ut impedit.
+                    {profileIntro}
                 </p>
                 <p className='py-2 text-gray-600'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae illum molestias accusamus consectetur eaque quam pariatur maiores. Dolorem, vitae rem atque culpa reprehenderit unde architecto consectetur laudantium veritatis, voluptatem exercitationem!
+                    {profileIntro}
                 </p>
-                <p  className='py-2 text-gray-600 underline cursor-pointer'>Check out some of my Latest Projects</p>
+                <a href='/#projects' className='py-2 text-gray-600 underline cursor-pointer'>Check out some of my Latest Projects</a>
             </div>
             <div className='w-full h-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
                 <img className='rounded-xl' src='/assets/Images/profile.jpg' alt='profile'/>
